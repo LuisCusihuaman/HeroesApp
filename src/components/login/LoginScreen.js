@@ -11,7 +11,7 @@ export const LoginScreen = ({ history }) => {
 				name: "Luis",
 			},
 		});
-		history.replace("/");
+		history.replace("/"); //await all task syncs
 	};
 	return (
 		<div className="container mt-5">
