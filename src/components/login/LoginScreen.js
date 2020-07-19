@@ -11,7 +11,7 @@ export const LoginScreen = ({ history }) => {
 				name: "Luis",
 			},
 		});
-		history.replace("/marvel");
+		history.replace("/");
 	};
 	return (
 		<div className="container mt-5">
