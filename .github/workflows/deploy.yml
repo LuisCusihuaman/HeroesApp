@@ -1,4 +1,4 @@
-#.github/workflows/react_deploy.yaml
+#.github/workflows/react_deploy.yml
 name: CD Stage
 on:
   push: 
@@ -23,9 +23,9 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.OS }}-build-${{ env.cache-name }}-
-            ${{ runner.OS }}-build-
-            ${{ runner.OS }}-
+            ${{ runner.os }}-node-${{ env.cache-name }}-
+            ${{ runner.os }}-node-
+            ${{ runner.os }}-
       - name: ⛏ Building
         run: npm install && npm run build
       - name: Deploy QA
